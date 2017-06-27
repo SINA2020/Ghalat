@@ -1,7 +1,7 @@
 ﻿local URL = require "socket.url"
 local https = require "ssl.https"
 local serpent = require "serpent"
-local json = (loadfile "/home/ta11/inline/JSON.lua")()
+local json = (loadfile "/home/ta21/inline/JSON.lua")()
 local token = '368219497:AAHiESR6dq4ftrVWaUhtKdnMB0BIWU4mlRM' --token
 local url = 'https://api.telegram.org/bot' .. token
 local offset = 0
@@ -1208,7 +1208,7 @@ elseif value == 'muteall' then
                    {text = '🔙 برگشت به منوی اصلی💠', callback_data = 'firstmenu:'..chat},{text = '2️⃣صفحه دوم ➡️', callback_data = 'next_page:'..chat}
                 }
               }
-            edit(q.inline_message_id,'_⚙️ تنظیمات ⚙️_\n`👈صفحه اول 1️⃣`\n@BGTeaM',keyboard)
+            edit(q.inline_message_id,'_⚙️ تنظیمات ⚙️_\n`👈صفحه اول 1️⃣`\n@Nice20Team',keyboard)
             end
 			------------------------------------------------------------------------
             if q.data:match('left_page') then
@@ -1301,7 +1301,7 @@ end
                    {text = '🔙 برگشت به منوی اصلی💠', callback_data = 'firstmenu:'..chat},{text = '2️⃣صفحه دوم ➡️', callback_data = 'next_page:'..chat}
                 }
               }
-            edit(q.inline_message_id,'_⚙️ تنظیمات ⚙️_\n`👈 برگشتیم به صفحه اول 1 ️⃣`\n@BGTeaM',keyboard)
+            edit(q.inline_message_id,'_⚙️ تنظیمات ⚙️_\n`👈 برگشتیم به صفحه اول 1 ️⃣`\n@Nice20Team',keyboard)
             end
 						if q.data:match('next_page') then
 							local chat = '-'..q.data:match('(%d+)$')
@@ -1328,7 +1328,7 @@ local function getsettings(value)
       exp = 0
       end
 			exp_dat = (math.floor((tonumber(exp) - tonumber(now)) / 86400) + 1)   
-        return exp_dat.."Day"
+        return exp_dat.."روز"
 end
         elseif value == 'muteall' then
         local h = redis:ttl(SUDO..'muteall'..chat)
@@ -1424,7 +1424,7 @@ end
                   {text = '🔙برگشت به صفحه اول1️⃣', callback_data = 'left_page:'..chat},{text = '🌀برگشت به منوی اصلی🔙', callback_data = 'firstmenu:'..chat}
                 }
               }
-              edit(q.inline_message_id,'_⚙️ تنظیمات ⚙️_\n`👈صفحه دوم 2 ️⃣`\n@BGTeaM',keyboard)
+              edit(q.inline_message_id,'_⚙️ تنظیمات ⚙️_\n`👈صفحه دوم 2 ️⃣`\n@Nice20Team',keyboard)
             end
             else Canswer(q.id,'⚠️Your Not Admin⚠️\n @BanG_TeaM',true)
 						end
