@@ -1026,7 +1026,7 @@ end
         unbanall(msg,msg.chat_id_,text:match('آن بن ال (%d+)'))
         end
       if text and text:match('^آن بن ال @(.*)') then
-        local username = text:match'آن بن ال @(.*)')
+        local username = text:match('آن بن ال @(.*)')
         function unbanusername(extra,result,success)
           if result.id_ then
             unbanall(msg,msg.chat_id_,result.id_)
