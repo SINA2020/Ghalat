@@ -1405,17 +1405,17 @@ end
                 },{
          {text=getsettings('warn'),callback_data=chat..':lock warn'}, {text = '⬅️ عملکرد اخطار 💠', callback_data = chat..'_warn'}
         },{
-          {text = '↙️حداکثر تعداد اخطار↘️ : '..tostring(WARN_MAX)..' wrn', callback_data = chat..'_WARN_MAX'}
+          {text = '↙️حداکثر تعداد اخطار↘️ : '..tostring(WARN_MAX)..' اخطار', callback_data = chat..'_WARN_MAX'}
                 },{
           {text='⬇️',callback_data=chat..':lock WARNMAXdown'},{text='⬆️',callback_data=chat..':lock WARNMAXup'}
                 },{
                  {text=getsettings('spam'),callback_data=chat..':lock spam'}, {text = '⬅️ عملکرد اسپم 💠', callback_data = chat..'_spam'}
                 },{
-                 {text = '↙️حداکثر زمان اسپم↘️ : '..tostring(TIME_MAX)..' Sec', callback_data = chat..'_TIME_MAX'}
+                 {text = '↙️حداکثر زمان اسپم↘️ : '..tostring(TIME_MAX)..' ثانیه', callback_data = chat..'_TIME_MAX'}
                 },{
                   {text='⬇️',callback_data=chat..':lock TIMEMAXdown'},{text='⬆️',callback_data=chat..':lock TIMEMAXup'}
                   },{
-                 {text = '↗️حداکثر تعداد اسپم↘️ : '..tostring(MSG_MAX)..' Msg', callback_data = chat..'_MSG_MAX'}
+                 {text = '↗️حداکثر تعداد اسپم↘️ : '..tostring(MSG_MAX)..' پیام', callback_data = chat..'_MSG_MAX'}
                 },{
                   {text='⬇️',callback_data=chat..':lock MSGMAXdown'},{text='⬆️',callback_data=chat..':lock MSGMAXup'}
                   },{
