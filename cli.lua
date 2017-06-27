@@ -1,12 +1,12 @@
-﻿bot = dofile('/home/ta11/inline/utils.lua')
-json = dofile('/home/ta11/inline/JSON.lua')
+﻿bot = dofile('/home/ta21/inline/utils.lua')
+json = dofile('/home/ta21/inline/JSON.lua')
 URL = require "socket.url"
 serpent = require("serpent")
 http = require "socket.http"
 https = require "ssl.https"
 redis = require('redis')
 db = redis.connect('127.0.0.1', 6379)
-BASE = '/home/ta11/inline/'
+BASE = '/home/ta21/inline/'
 SUDO = 372530129 -- sudo id
 sudo_users = {372530129,Userid}
 BOTS = 249464384 -- bot id
@@ -248,49 +248,49 @@ end
 function settings(msg,value,lock) 
 local hash = SUDO..'settings:'..msg.chat_id_..':'..value
   if value == 'file' then
-      text = '📂File Has Been'
+      text = '📂ارسال فایل'
    elseif value == 'keyboard' then
-    text = '⛓Inline Keyboard Has Been'
+    text = '⛓ارسال دکمه شیشه ای'
   elseif value == 'link' then
-    text = '🌐Links Has Been'
+    text = '🌐ارسال لینک'
   elseif value == 'game' then
-    text = '🎮Game Has Been'
+    text = '🎮ارسال بازی'
     elseif value == 'username' then
-    text = '🆔UserName Has Been'
+    text = '🆔ارسال تگ'
    elseif value == 'pin' then
-    text = '🔰Pin Has Been'
+    text = '🔰سنجاق کردن'
     elseif value == 'photo' then
-    text = '🌠Photos Has Been'
+    text = '🌠ارسال عکس'
     elseif value == 'gif' then
-    text = '🖼Gifs Has Been'
+    text = '🖼ارسال گیف'
     elseif value == 'video' then
-    text = '🎥Videos Has Been'
+    text = '🎥ارسال ویدئو'
     elseif value == 'audio' then
-    text = '🎤Audio & Voice Has Been'
+    text = '🎤ارسال ویس'
     elseif value == 'music' then
-    text = '🎶Music Has Been'
+    text = '🎶ارسال آهنگ'
     elseif value == 'text' then
-    text = '📝Text Has Been'
+    text = '📝ارسال متن'
     elseif value == 'sticker' then
-    text = '🌅Stickers Has Been'
+    text = '🌅ارسال عکس'
     elseif value == 'contact' then
-    text = '☎️Contacts Has Been'
+    text = '☎️ارسال مخاطب'
     elseif value == 'forward' then
-    text = '🔗Forward Has Been'
+    text = '🔗ارسال فوروارد'
     elseif value == 'persian' then
-    text = '🇮🇷Persian Has Been'
+    text = '🇮🇷متن فارسی'
     elseif value == 'english' then
-    text = '🇳🇿English Has Been'
+    text = '🇳🇿متن انگلیسی'
     elseif value == 'bot' then
-    text = '🤖Bots Has Been'
+    text = '🤖ورود ربات'
     elseif value == 'tgservice' then
-    text = '⚙️TGService Has Been'
+    text = '⚙️سرویس های تلگرام'
     else return false
     end
   if lock then
 db:set(hash,true)
 local id = msg.sender_user_id_
-           local lmsg = '✔️Click See Locker✔️\n➖➖➖➖➖➖➖➖➖\n'..text..' 》 Locked🔐\n➖➖➖➖➖➖➖➖➖\n👉 @Nice20Team'
+           local lmsg = '✔️پی وی قفل کننده✔️\n➖➖➖➖➖➖➖➖➖\n'..text..' 》 قفل شد🔐\n➖➖➖➖➖➖➖➖➖\n👉 @Nice20Team'
             tdcli_function ({
 			ID="SendMessage",
 			chat_id_=msg.chat_id_,
@@ -311,7 +311,7 @@ local id = msg.sender_user_id_
     else
   db:del(hash)
 local id = msg.sender_user_id_
-           local Umsg = '✔️Click TO See UnLocker✔️\n➖➖➖➖➖➖➖➖➖\n'..text..' 》 UnLocked🔓\n➖➖➖➖➖➖➖➖➖\n👉 @Nice20Team'
+           local Umsg = '✔️پی وی آزاد کننده✔️\n➖➖➖➖➖➖➖➖➖\n'..text..' 》 آزاد شد🔓\n➖➖➖➖➖➖➖➖➖\n👉 @Nice20Team'
             tdcli_function ({
 			ID="SendMessage",
 			chat_id_=msg.chat_id_,
@@ -467,7 +467,7 @@ end
 if chackgp(msg) then 
 local chcklink = db:get(SUDO..'grouplink'..msg.chat_id_) 
 if not chcklink and is_owner(msg) then 
-bot.sendMessage(msg.chat_id_, msg.id_, 1, '<code>>لطفا لینک گروه را صبت کنید در غیر اینصورت ربات غیر فعال در گروهتان باقی میماند</code>', 1, 'html')
+bot.sendMessage(msg.chat_id_, msg.id_, 1, '<code>>لطفا لینک گروه را ثبت کنید در غیر اینصورت ربات غیر فعال در گروهتان باقی میماند</code>', 1, 'html')
 else 
 local ch = msg.chat_id_
 local user_id = msg.sender_user_id_
@@ -531,14 +531,14 @@ local exp = tonumber(db:get('bot:charge:'..msg.chat_id_))
 			exp_dat = (math.floor((tonumber(exp) - tonumber(now)) / 86400) + 1)      
 end
 if exp_dat == 1 and is_owner(msg) and not is_sudo(msg) and not is_sudoers(msg) then 
-local texter = 'Group expiry date ends in 1 day⚠️\nCharging Group to apply❗️\n`Otherwise the robot within 24 hours of the Left🔅`\n💯 BanG TeaM'
+local texter = 'از شارژ گروه فقط یک روز باقی مانده است⚠️\nگروه خود را شارژ کنید❗️\n`در غیر این صورت ربات در 24 ساعت آینده لفت خواهد داد🔅`\n💯 nice20 TeaM'
 bot.sendMessage(msg.chat_id_,0,1,texter,0,'md')
 end
 
 if exp_dat == 0 and is_owner(msg) and not is_sudo(msg) and not is_sudoers(msg) then
 db:del('bot:charge:'..msg.chat_id_)
 bot.changeChatMemberStatus(msg.chat_id_, 249464384, "Left")
-local texter = 'Group ended expiration date⚠️\n`The group removed from a Group List❗️\nPlease admins to extend to one of the following channels are presented in the message manager🔅`\n💯BanG TeaM'
+local texter = 'شارژ گروه تمام شد⚠️\n`گروه از لیست مدیریت ربات حذف شد❗️\nبرای شارژ مجدد به مدیر مراجعه کنیدک 🔅`\n💯nice20 TeaM'
 bot.sendMessage(msg.chat_id_,0,1,texter,0,'md')
 end
  
