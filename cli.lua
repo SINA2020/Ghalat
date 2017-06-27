@@ -444,12 +444,12 @@ function run(msg,data)
  ------------------------------------------------------------
 if chat_type == 'super' then
 --------------------------gp add -------------------------
-if text == 'add' and is_sudoers(msg) then
+if text == 'اضافه' and is_sudoers(msg) then
 db:sadd('bot:gps', msg.chat_id_)
 bot.sendMessage(msg.chat_id_, msg.id_, 1, '<code>>انجام شد</code>\n<code>گروه به لیست گروه های ربات اضافه شد./nبرای فعال شدن گروه لطفا لینک گروه را ثبت نمایید </code>', 1, 'html')
 end 
 --------------------------rem add -------------------------
-if text == 'rem' and is_sudoers(msg) then
+if text == 'حذف' and is_sudoers(msg) then
 db:srem('bot:gps', msg.chat_id_)
 db:del(SUDO..'mods:'..msg.chat_id_)
 db:del(SUDO..'owners:'..msg.chat_id_)
@@ -458,8 +458,8 @@ db:del('bot:rules'..msg.chat_id_)
 bot.sendMessage(msg.chat_id_, msg.id_, 1, '<code>>انجام شد</code>\n<code>گروه از لیست گروه های ربات پاک شد .</code>', 1, 'html')
 end
 --------------------------set link -----------------------
-if text and text:match('^setlink (.*)') and is_owner(msg) then
-local link = text:match('setlink (.*)')
+if text and text:match('^تنظیم لینک (.*)') and is_owner(msg) then
+local link = text:match('تنظیم لینک (.*)')
 db:set(SUDO..'grouplink'..msg.chat_id_, link)
 bot.sendMessage(msg.chat_id_, msg.id_, 1,'<code>>لینک جدید با موفقیت ذخیره و تغییر یافت.</code>\n <code>سوپر گروه با موفقیت فعال شد </code>', 1, 'html')
 end
@@ -856,7 +856,7 @@ end
     if text then
 	
   -------------------info------------------------#MehTi
-if text and text:match('^info') then 
+if text and text:match('^اطلاعات') then 
 	local ch = msg.chat_id_
 	local user = msg.sender_user_id_
     local name = db:hget("mehti:info:"..user, "name")
@@ -984,7 +984,7 @@ end
 --------------- text -----------------------------------  
 	        if is_sudoers(msg) then
 -----------ban all ------------------
-        if text == 'sikall' then
+        if text == 'بن ال' then
 		if msg.reply_to_message_id_ == 0 then
         local user = msg.sender_user_id_
         bot.sendMessage(msg.chat_id_, msg.id_, 1, "*wtf? reply kn gole man:)*", 1, 'md')
@@ -995,11 +995,11 @@ end
 		  end
         bot.getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),banreply)
         end
-		      if text and text:match('^banall (%d+)') then
-        banall(msg,msg.chat_id_,text:match('^banall (%d+)'))
+		      if text and text:match('بن ال (%d+)') then
+        banall(msg,msg.chat_id_,text:match('^بن ال (%d+)'))
         end
-      if text and text:match('^banall @(.*)') then
-        local username = text:match('banall @(.*)')
+      if text and text:match('بن ال @(.*)') then
+        local username = text:match('بن ال @(.*)')
         function banusername(extra,result,success)
           if result.id_ then
             banall(msg,msg.chat_id_,result.id_)
@@ -1011,7 +1011,7 @@ end
         bot.resolve_username(username,banusername)
         end
 ----------------------unbanall-----------------------------
-        if text == 'unbanall' then
+        if text == 'آن بن ال' then
 		if msg.reply_to_message_id_ == 0 then
         local user = msg.sender_user_id_
         bot.sendMessage(msg.chat_id_, msg.id_, 1, "*wtf? reply kn gole man:)*", 1, 'md')
@@ -1022,11 +1022,11 @@ end
 		  end
         bot.getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),unbanreply)
         end	
-      if text and text:match('^unbanall (%d+)') then
-        unbanall(msg,msg.chat_id_,text:match('unbanall (%d+)'))
+      if text and text:match('آن بن ال (%d+)') then
+        unbanall(msg,msg.chat_id_,text:match('آن بن ال (%d+)'))
         end
-      if text and text:match('^unbanall @(.*)') then
-        local username = text:match('unbanall @(.*)')
+      if text and text:match('^آن بن ال @(.*)') then
+        local username = text:match'آن بن ال @(.*)')
         function unbanusername(extra,result,success)
           if result.id_ then
             unbanall(msg,msg.chat_id_,result.id_)
@@ -1338,12 +1338,12 @@ end
         ..'><code>Mute-Chat:</code> |'..getsettings('muteall')..'|\n'
         bot.sendMessage(msg.chat_id_, msg.id_, 1, text, 1, '')
        end]]
-      if text and text:match('^floodmax (%d+)$') then
+      if text and text:match('^تعداد فلود (%d+)$') then
 		local ch = msg.chat_id_
           db:hset("flooding:settings:"..ch ,"floodmax" ,text:match('floodmax (.*)'))
           bot.sendMessage(msg.chat_id_, msg.id_, 1,'<code>>حداکثر پیام تشخیص ارسال پیام مکرر تنظیم شد به:</code> [<b>'..text:match('floodmax (.*)')..'</b>] <code>تغییر یافت.</code>', 1, 'html')
         end
-        if text and text:match('^floodtime (%d+)$') then
+        if text and text:match('^زمان فلود (%d+)$') then
 		local ch = msg.chat_id_
           db:hset("flooding:settings:"..ch ,"floodtime" ,text:match('floodtime (.*)'))
           bot.sendMessage(msg.chat_id_, msg.id_, 1,'<code>>حداکثر زمان تشخیص ارسال پیام مکرر تنظیم شد به:</code> [<b>'..text:match('floodtime (.*)')..'</b>] <code>ثانیه.</code>', 1, 'html')
@@ -1360,8 +1360,8 @@ end
           db:set(SUDO..'muteall'..msg.chat_id_,true)
         bot.sendMessage(msg.chat_id_, msg.id_, 1, '⚜️<code>Mute Chat</code> <b>Has Been Enabled🔇</b>', 1, 'html')
           end
-        if text and text:match('^mutechat (%d+)[mhs]') or text and text:match('^mutechat (%d+) [mhs]') then
-          local matches = text:match('^mutechat (.*)')
+        if text and text:match('قفل گروه(%d+)[mhs]') or text and text:match('^mutechat (%d+) [mhs]') then
+          local matches = text:match('^قفل گروه (.*)')
           if matches:match('(%d+)h') then
           time_match = matches:match('(%d+)h')
           time = time_match * 3600
@@ -1411,7 +1411,7 @@ end
 		
 -------------------------------------
 		
-   if text == 'banalls' or text == 'gbanlist' then
+   if text == 'لیست بن ال' or text == 'بن ال ها' then
           local list = db:smembers(SUDO..'banalled')
           local t = '<code>>لیست افراد مسدود شده از گروه:</code> \n\n'
           for k,v in pairs(list) do
@@ -1423,7 +1423,7 @@ end
           end
           bot.sendMessage(msg.chat_id_, msg.id_, 1,t, 1, 'html')
       end
-      if text == 'delete banalls' or text == 'delete gbanlist' then
+      if text == 'حذف لیست بن ال' or text == 'آزادی بن ال ها' then
         db:del(SUDO..'banalled')
           bot.sendMessage(msg.chat_id_, msg.id_, 1,'<code>>لیست کاربران مسدود شده از گروه با موفقیت بازنشانی گردید.</code>', 1, 'html')
         end	
@@ -1596,16 +1596,16 @@ end
 -- lock flood settings
 if text and is_owner(msg) then
 local ch = msg.chat_id_
-if text == 'warn kick' then
+if text == 'فلود اخراج' then
 db:hset("warn:settings:"..ch ,"swarn",'kick') 
 bot.sendMessage(msg.chat_id_, msg.id_, 1, '<code>وضعیت اخطار در گروه تغییر کرد</code> \n<code>وضعیت</code> > <i>اخراج(کاربر)</i>',1, 'html')
-elseif text == 'warn ban' then
+elseif text == 'فلود بن' then
 db:hset("warn:settings:"..ch ,"swarn",'ban') 
 bot.sendMessage(msg.chat_id_, msg.id_, 1, '<code>وضعیت اخطار در گروه تغییر کرد</code> \n<code>وضعیت</code> > <i>مسدود-سازی(کاربر)</i>',1, 'html')
-elseif text == 'warn mute' then
+elseif text == 'فلود سایلنت' then
 db:hset("warn:settings:"..ch ,"swarn",'mute') 
 bot.sendMessage(msg.chat_id_, msg.id_, 1, '<code>وضعیت اخطار در گروه تغییر کرد</code> \n<code>وضعیت</code> > <i>سکوت(کاربر)</i>',1, 'html')
-elseif text == 'warn reset' then
+elseif text == 'فلود پیشفرض' then
 db:hset("warn:settings:"..ch ,"swarn",'kick') 
 bot.sendMessage(msg.chat_id_, msg.id_, 1, ' <code>وضعیت اخطار در گروه به حالت پیشفرض تغییر کرد </code> ',1, 'html')
 end
@@ -1613,7 +1613,7 @@ end
 
 ---------------------------------------------------------------------
 
-      if text == 'warn' and tonumber(msg.reply_to_message_id_) > 0 then
+      if text == 'اخطار' and tonumber(msg.reply_to_message_id_) > 0 then
 		function swarn_by_reply(extra, result, success)
 		local nwarn = tonumber(db:hget("warn:settings:"..result.chat_id_,result.sender_user_id_) or 0)
 	    local wmax = tonumber(db:hget("warn:settings:"..result.chat_id_ ,"warnmax") or 3)
@@ -1630,19 +1630,19 @@ end
 	-----------info settings -------------
         --setname 
 			  local user = msg.sender_user_id_
-      if text and text:match('^setpname (.*)$') then
-	  db:hset("mehti:info:"..user ,"name" ,text:match('setpname (.*)'))
+      if text and text:match('^تنظیم نام (.*)$') then
+	  db:hset("mehti:info:"..user ,"name" ,text:match('تنظیم نام (.*)'))
 	  text = "ok"
 	  bot.sendMessage(msg.chat_id_, msg.id_, 1, text, 1, 'html')
 	  -----------set lastname -------------
-      elseif text and text:match('^setlname (.*)$') then
-	  local lname = text:match('^setlname (.*)$')
+      elseif text and text:match('^تنظیم فامیلی (.*)$') then
+	  local lname = text:match('^تنظیم فامیلی (.*)$')
 	  db:hset("mehti:info"..user ,"lname" ,lname)
 	  	  text = "ok"
 	  bot.sendMessage(msg.chat_id_, msg.id_, 1, text, 1, 'html')
 	  -----------set sex -------------
-      elseif text and text:match('^setsex (.*)$') then
-	  local sex = text:match('^setsex (.*)$')
+      elseif text and text:match('^تنظیم جنسیت (.*)$') then
+	  local sex = text:match('^تنظیم جنسیت (.*)$')
 	  db:hset("mehti:info"..user,"sex" ,sex)
 	  	  text = "ok"
 	  bot.sendMessage(msg.chat_id_, msg.id_, 1, text, 1, 'html')
@@ -1653,23 +1653,23 @@ end
 	  	  text = "ok"
 	  bot.sendMessage(msg.chat_id_, msg.id_, 1, text, 1, 'html')
 	  -----------set hiphop ----------
-	  elseif text and text:match('^setage (%d+)$') then	
-	  local hp = text:match('^setage (%d+)$')
+	  elseif text and text:match('^تنطیم سن (%d+)$') then	
+	  local hp = text:match('^تنظیم سن (%d+)$')
 	  db:hset("mehti:info"..user, "hiphop",hp)
 	  	  text = "ok"
 	  bot.sendMessage(msg.chat_id_, msg.id_, 1, text, 1, 'html')
 	  -----------del name -------------
-	  elseif text and text:match('^del name$') then
+	  elseif text and text:match('^حذف نام$') then
 	  db:hdel("mehti:info:"..user, "name")
 	  	  text = "ok"
 	  bot.sendMessage(msg.chat_id_, msg.id_, 1, text, 1, 'html')
 	  -----------del lastname -------------
-	  elseif text and text:match('^del lname$') then
+	  elseif text and text:match('^حذف فامیلی$') then
 	  db:hdel('mehti:info'..user, 'lname')
 	  	  text = "ok"
 	  bot.sendMessage(msg.chat_id_, msg.id_, 1, text, 1, 'html')
 	  -----------del sex -------------
-	  elseif text and text:match('^del sex$') then
+	  elseif text and text:match('^حذف جنسیت$') then
 	  db:hdel('mehti:info'..user, 'sex')
 	  	  text = "ok"
 	  bot.sendMessage(msg.chat_id_, msg.id_, 1, text, 1, 'html')
@@ -1679,18 +1679,18 @@ end
 	  	  text = "ok"
 	  bot.sendMessage(msg.chat_id_, msg.id_, 1, text, 1, 'html')
 	  -----------del hh -------------
-	  elseif text and text:match('^del age$') then
+	  elseif text and text:match('^حذف سن$') then
 	  db:hdel('mehti:info'..user, 'hiphop')
 	  	  text = "ok"
 	  bot.sendMessage(msg.chat_id_, msg.id_, 1, text, 1, 'html')
 	  -----------cstm------------
-	  elseif text and text:match('^set cstm$') then
+	  elseif text and text:match('^تنظیم مشتری$') then
 	  text = 12 
 	  db:hset("mehti:info"..user,"cstm" ,text)
 	  	  text = "ok"
 	  bot.sendMessage(msg.chat_id_, msg.id_, 1, text, 1, 'html')
 	  
-	  	  elseif text and text:match('^del cstm$') then
+	  	  elseif text and text:match('^حذف مشتری$') then
 	  db:hdel("mehti:info"..user,"cstm")
 	  	  text = "ok"
 	  bot.sendMessage(msg.chat_id_, msg.id_, 1, text, 1, 'html')
