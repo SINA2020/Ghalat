@@ -892,28 +892,28 @@ if text and text:match('^اطلاعات') then
 	
 	
 	if cstm and sex and hiphop and bio then 
-	  local text = '🔅نام : '..name..'\n🔅فامیلی : '..lastname..'\n🔅شناسه : '..user..'\n🔅شناسه گروه : '..ch..'\n🔅تعداد پیامهای شما : '..usermsg..'\n🔅رتبه : '..t..'\n➖➖custom info➖➖\n🔅Sex : '..sex..'\n🔅Bio : '..bio..'\n🔅Age : '..hiphop..'\n➖➖Time and Date➖➖\n⌚️Time : '..jdat.FAtime..'\n🗓Date : '..jdat.FAdate..''
+	  local text = '🔅نام : '..name..'\n🔅فامیلی : '..lastname..'\n🔅شناسه شما : '..user..'\n🔅شناسه گروه : '..ch..'\n🔅تعداد پیامها  : '..usermsg..'\n🔅رتبه : '..t..'\n➖➖custom info➖➖\n🔅جنسیت : '..sex..'\n🔅Bio : '..bio..'\n🔅سن : '..hiphop..'\n➖➖تاریخ و زمان➖➖\n⌚️زمان : '..jdat.FAtime..'\n🗓تاریخ : '..jdat.FAdate..''
  bot.sendMessage(msg.chat_id_, msg.id_, 1, text,0)
 	  elseif cstm and sex and hiphop and not bio then 
-	  	  local text = '🔅Name : '..name..'\n🔅Last Name : '..lastname..'\n🔅User ID : '..user..'\n🔅Gp ID : '..ch..'\n🔅Your Msg Sender : '..usermsg..'\n🔅Rank : '..t..'\n➖➖custom info➖➖\n🔅Sex : '..sex..'\n🔅Age : '..hiphop..'\n➖➖Time and Date➖➖\n⌚️Time : '..jdat.FAtime..'\n🗓Date : '..jdat.FAdate..''
+	  	  local text = '🔅نام : '..name..'\n🔅فامیلی : '..lastname..'\n🔅شناسه شما: '..user..'\n🔅شناسه گروه : '..ch..'\n🔅تعداد پیامها : '..usermsg..'\n🔅رتبه : '..t..'\n➖➖custom info➖➖\n🔅جنسیت : '..sex..'\n🔅سن : '..hiphop..'\n➖➖تاریخ و زمان➖➖\n⌚️زمان : '..jdat.FAtime..'\n🗓تاریخ : '..jdat.FAdate..''
  bot.sendMessage(msg.chat_id_, msg.id_, 1, text,0)
 	  elseif cstm and hiphop and bio and not sex then 
-	  	  local text = '🔅Name : '..name..'\n🔅Last Name : '..lastname..'\n🔅User ID : '..user..'\n🔅Gp ID : '..ch..'\n🔅Your Msg Sender : '..usermsg..'\n🔅Rank : '..t..'\n➖➖custom info➖➖\n🔅Bio : '..bio..'\n🔅Age : '..hiphop..'\n➖➖Time and Date➖➖\n⌚️Time : '..jdat.FAtime..'\n🗓Date : '..jdat.FAdate..''
+	  	  local text = '🔅نام : '..name..'\n🔅فامیلی : '..lastname..'\n🔅شناسه شما : '..user..'\n🔅شناسه گروه : '..ch..'\n🔅تعداد پیامها : '..usermsg..'\n🔅رتبه : '..t..'\n➖➖custom info➖➖\n🔅Bio : '..bio..'\n🔅سن : '..hiphop..'\n➖➖تاریخ و زمان➖➖\n⌚️زمان : '..jdat.FAtime..'\n🗓تاریخ : '..jdat.FAdate..''
  bot.sendMessage(msg.chat_id_, msg.id_, 1, text,0)
 	  elseif cstm and sex and bio and not hiphop then 
-	  	  local text = '🔅Name : '..name..'\n🔅Last Name : '..lastname..'\n🔅User ID : '..user..'\n🔅Gp ID : '..ch..'\n🔅Your Msg Sender : '..usermsg..'\n🔅Rank : '..t..'\n➖➖custom info➖➖\n🔅Sex : '..sex..'\n🔅Bio : '..bio..'\n➖➖Time and Date➖➖\n⌚️Time : '..jdat.FAtime..'\n🗓Date : '..jdat.FAdate..''
+	  	  local text = '🔅نام : '..name..'\n🔅فامیلی : '..lastname..'\n🔅شناسه شما : '..user..'\n🔅شناسه گروه : '..ch..'\n🔅تعداد پیامها : '..usermsg..'\n🔅رتبه : '..t..'\n➖➖custom info➖➖\n🔅جنسیت : '..sex..'\n🔅Bio : '..bio..'\n➖➖تاریخ و زمان➖➖\n⌚️زمان : '..jdat.FAtime..'\n🗓تاریخ : '..jdat.FAdate..''
  bot.sendMessage(msg.chat_id_, msg.id_, 1, text,0)
 	  elseif cstm and sex and not hiphop and not bio then 
-	  	  local text = '🔅Name : '..name..'\n🔅Last Name : '..lastname..'\n🔅User ID : '..user..'\n🔅Gp ID : '..ch..'\n🔅Your Msg Sender : '..usermsg..'\n🔅Rank : '..t..'\n➖➖custom info➖➖\n🔅Sex : '..sex..'\n➖➖Time and Date➖➖\n⌚️Time : '..jdat.FAtime..'\n🗓Date : '..jdat.FAdate..''
+	  	  local text = '🔅نام : '..name..'\n🔅فامیلی : '..lastname..'\n🔅شناسه شما : '..user..'\n🔅شناسه گروه : '..ch..'\n🔅تعداد پیامها : '..usermsg..'\n🔅رتبه : '..t..'\n➖➖custom info➖➖\n🔅جنسیت : '..sex..'\n➖➖تاریخ و زمان➖➖\n⌚️زمان : '..jdat.FAtime..'\n🗓تاریخ : '..jdat.FAdate..''
  bot.sendMessage(msg.chat_id_, msg.id_, 1, text,0)
 	  elseif cstm and not sex and hiphop and not bio then
-	      local text = '🔅Name : '..name..'\n🔅Last Name : '..lastname..'\n🔅User ID : '..user..'\n🔅Gp ID : '..ch..'\n🔅Your Msg Sender : '..usermsg..'\n🔅Rank : '..t..'\n➖➖custom info➖➖\n🔅Age : '..hiphop..'\n➖➖Time and Date➖➖\n⌚️Time : '..jdat.FAtime..'\n🗓Date : '..jdat.FAdate..''
+	      local text = '🔅نام : '..name..'\n🔅فامیلی : '..lastname..'\n🔅شناسه شما : '..user..'\n🔅شناسه گروه : '..ch..'\n🔅تعداد پیامها : '..usermsg..'\n🔅رتبه : '..t..'\n➖➖custom info➖➖\n🔅سن : '..hiphop..'\n➖➖تاریخ و زمان➖➖\n⌚️زمان : '..jdat.FAtime..'\n🗓تاریخ : '..jdat.FAdate..''
  bot.sendMessage(msg.chat_id_, msg.id_, 1, text,0)
 	  elseif cstm and not sex and not hiphop and bio then
-	      local text = '🔅Name : '..name..'\n🔅Last Name : '..lastname..'\n🔅User ID : '..user..'\n🔅Gp ID : '..ch..'\n🔅Your Msg Sender : '..usermsg..'\n🔅Rank : '..t..'\n➖➖custom info➖➖\n🔅Bio : '..bio..'\n➖➖Time and Date➖➖\n⌚️Time : '..jdat.FAtime..'\n🗓Date : '..jdat.FAdate..''
+	      local text = '🔅نام : '..name..'\n🔅فامیلی : '..lastname..'\n🔅شناسه شما : '..user..'\n🔅شناسه گروه : '..ch..'\n🔅تعداد پیامها  : '..usermsg..'\n🔅رتبه : '..t..'\n➖➖custom info➖➖\n🔅Bio : '..bio..'\n➖➖تاریخ و زمان➖➖\n⌚️زمان : '..jdat.FAtime..'\n🗓تاریخ : '..jdat.FAdate..''
  bot.sendMessage(msg.chat_id_, msg.id_, 1, text,0)
 	 else 
-	 local text = '🔅Name : '..name..'\n🔅Last Name : '..lastname..'\n🔅User ID : '..user..'\n🔅Gp ID : '..ch..'\n🔅Your Msg Sender : '..usermsg..'\n🔅Rank : '..t..'\n➖➖Time and Date➖➖\n⌚️Time : '..jdat.FAtime..'\n🗓Date : '..jdat.FAdate..''
+	 local text = '🔅نام : '..name..'\n🔅فامیلی : '..lastname..'\n🔅شناسه شما : '..user..'\n🔅شناسه گروه : '..ch..'\n🔅تعداد پیامها  : '..usermsg..'\n🔅رتبه : '..t..'\n➖➖تاریخ و زمان➖➖\n⌚️زمان : '..jdat.FAtime..'\n🗓تاریخ : '..jdat.FAdate..''
      bot.sendMessage(msg.chat_id_, msg.id_, 1, text,0)
 	end 
 	end 
