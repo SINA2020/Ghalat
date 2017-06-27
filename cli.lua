@@ -892,7 +892,7 @@ if text and text:match('^اطلاعات') then
 	
 	
 	if cstm and sex and hiphop and bio then 
-	  local text = '🔅Name : '..name..'\n🔅Last Name : '..lastname..'\n🔅User ID : '..user..'\n🔅Gp ID : '..ch..'\n🔅Your Msg Sender : '..usermsg..'\n🔅Rank : '..t..'\n➖➖custom info➖➖\n🔅Sex : '..sex..'\n🔅Bio : '..bio..'\n🔅Age : '..hiphop..'\n➖➖Time and Date➖➖\n⌚️Time : '..jdat.FAtime..'\n🗓Date : '..jdat.FAdate..''
+	  local text = '🔅نام : '..name..'\n🔅فامیلی : '..lastname..'\n🔅شناسه : '..user..'\n🔅شناسه گروه : '..ch..'\n🔅تعداد پیامهای شما : '..usermsg..'\n🔅رتبه : '..t..'\n➖➖custom info➖➖\n🔅Sex : '..sex..'\n🔅Bio : '..bio..'\n🔅Age : '..hiphop..'\n➖➖Time and Date➖➖\n⌚️Time : '..jdat.FAtime..'\n🗓Date : '..jdat.FAdate..''
  bot.sendMessage(msg.chat_id_, msg.id_, 1, text,0)
 	  elseif cstm and sex and hiphop and not bio then 
 	  	  local text = '🔅Name : '..name..'\n🔅Last Name : '..lastname..'\n🔅User ID : '..user..'\n🔅Gp ID : '..ch..'\n🔅Your Msg Sender : '..usermsg..'\n🔅Rank : '..t..'\n➖➖custom info➖➖\n🔅Sex : '..sex..'\n🔅Age : '..hiphop..'\n➖➖Time and Date➖➖\n⌚️Time : '..jdat.FAtime..'\n🗓Date : '..jdat.FAdate..''
