@@ -767,8 +767,8 @@ end
       end
       -- locks
     if text and is_owner(msg) then
-      local lock = text:match('^lock pin$')
-       local unlock = text:match('^unlock pin$')
+      local lock = text:match('^قفل سنجاق$')
+       local unlock = text:match('^بازکردن سنجاق$')
       if lock then
           settings(msg,'pin','lock')
           end
@@ -778,9 +778,9 @@ end
       end 
     if text and is_mod(msg) then
 ---------------lock by #MehTi---------------
-	if text:match('^lock (.*)$') then
-       local lock = text:match('^lock (.*)$')   
-	   local locks = {"all","Flood","Spam","Link","markdown","tag","username","english","arabic","fwd","reply","emoji","edit","Pin","Cmd","Addmember","Joinmember","Bot","photo","video","gif","sticker","document","inline","text","audio","location","contact"}
+	if text:match('^قفل (.*)$') then
+       local lock = text:match('^قفل (.*)$')   
+	   local locks = {"همه","فلود","اسپم","لینک","فراخوانی","تگ","یوزرنیم","انگلیسی","عربی","فوروارد","ریپلی","شکلک","ادیت","سنجاق","دستور","اد ممبر","جوین ممبر","ربات","عکس","ویدیو","گیف","استیکر","فایل","اینلاین","متن","ویس","مان","مخاطب"}
 local suc = 0
 for i,v in pairs(locks) do
 if lock == v:lower() then
@@ -799,16 +799,16 @@ end
 
 
 ------------------------------------------------
-if text:match('^edite (lock)$') then
-local locking = text:match('^edite (lock)$') 
+if text:match('^ادیت (lock)$') then
+local locking = text:match('^ادیت (lock)$') 
 db:set('edit:Lock:'..msg.chat_id_,'lock')
 textedit = "ok"
 bot.sendMessage(msg.chat_id_, msg.id_, 1,textedit, 1, 'md')
 end
  ----------------Lock By #MehTi-----------------
-if text:match('^unlock (.*)$') then
+if text:match('^بازکردن (.*)$') then
 local unlock = text:match('^unlock (.*)$')   
-local locks = {"all","Flood","Spam","Link","markdown","tag","username","english","arabic","fwd","reply","emoji","edit","Pin","Cmd","Addmember","Joinmember","Bot","photo","video","gif","sticker","document","inline","text","audio","location","contact"}
+local locks = {"همه","فلود","اسپم","لینک","فواخوانی","تگ","یوزرنیم","انگلیسی","عربی","فوروارد","ریپلی","شکلک","ادیت","سنجاق","دستور","اد ممبر","جوین ممبر","ربات","عکس","ویدیو","گیف","استیکر","فایل","اینلاین","متن","ویس","مکان","مخاطب"}
 local suc = 0
 for i,v in pairs(locks) do
 if unlock == v:lower() then
@@ -826,8 +826,8 @@ end
 end
 -------------------end lock ---------------------------#MehTi 
  
-       local unlock = text:match('^unlock (.*)$')
-      local pin = text:match('^lock pin$') or text:match('^unlock pin$')
+       local unlock = text:match('^بازکردن (.*)$')
+      local pin = text:match('^قفل سنجاق$') or text:match('^بازکردن سنجاق$')
       if pin and is_owner(msg) then
         elseif pin and not is_owner(msg) then
         bot.sendMessage(msg.chat_id_, msg.id_, 1, '<code>انجام این دستور برای شما مجاز نمیباشد!</code>',1, 'html') 
@@ -837,16 +837,16 @@ end
  -- lock flood settings
     if text and is_owner(msg) then
 	   local ch = msg.chat_id_
-      if text == 'flood kick' then
+      if text == 'فلود اخراج' then
       db:hset("flooding:settings:"..ch ,"flood",'kick') 
         bot.sendMessage(msg.chat_id_, msg.id_, 1, '<code>قفل ارسال پیام مکرر فعال گردید!</code> \n<code>وضعیت</code> > <i>اخراج(کاربر)</i>',1, 'html')
-      elseif text == 'flood ban' then
+      elseif text == 'فلود بن' then
         db:hset("flooding:settings:"..ch ,"flood",'ban') 
         bot.sendMessage(msg.chat_id_, msg.id_, 1, '<code>قفل ارسال پیام مکرر فعال گردید!</code> \n<code>وضعیت</code> > <i>مسدود-سازی(کاربر)</i>',1, 'html')
-        elseif text == 'flood mute' then
+        elseif text == 'فلود سایلنت' then
         db:hset("flooding:settings:"..ch ,"flood",'mute') 
         bot.sendMessage(msg.chat_id_, msg.id_, 1, '<code>قفل ارسال پیام مکرر فعال گردید!</code> \n<code>وضعیت</code> > <i>سکوت(کاربر)</i>',1, 'html')
-        elseif text == 'unlock flood' then
+        elseif text == 'بازکردن فلود' then
         db:hdel("flooding:settings:"..ch ,"flood") 
         bot.sendMessage(msg.chat_id_, msg.id_, 1, ' <code>قفل ارسال پیام مکرر غیرفعال گردید!</code> ',1, 'html')
             end
