@@ -1653,7 +1653,7 @@ end
 	  	  text = "ok"
 	  bot.sendMessage(msg.chat_id_, msg.id_, 1, text, 1, 'html')
 	  -----------set hiphop ----------
-	  elseif text and text:match('^تنطیم سن (%d+)$') then	
+	  elseif text and text:match('^تنظیم سن (%d+)$') then	
 	  local hp = text:match('^تنظیم سن (%d+)$')
 	  db:hset("mehti:info"..user, "hiphop",hp)
 	  	  text = "ok"
@@ -1783,7 +1783,7 @@ end
         local username = text:match('^چه کسی @(.*)')
         function id_by_username(extra,result,success)
           if result.id_ then
-            text = '<b>⚜️Your UserID</b> 👉 [<code>'..result.id_..'</code>]\n<b>⚜️Your Msg Send<b> 👉 <code>'..(db:get(SUDO..'total:messages:'..msg.chat_id_..':'..result.id_) or 0)..'</code>'
+            text = '<b>⚜️شناسه شما</b> 👉 [<code>'..result.id_..'</code>]\n<b>⚜️تعداد پیامها<b> 👉 <code>'..(db:get(SUDO..'total:messages:'..msg.chat_id_..':'..result.id_) or 0)..'</code>'
             else 
             text = '<code>کاربر مورد نظر یافت نشد!</code>'
             end
@@ -1804,13 +1804,13 @@ end
         if text and text:match('شارژ (%d+)') and is_sudoers(msg) then
               local chare = text:match('شارژ (%d+)')
 if tonumber(chare) < 0 or tonumber(chare) > 999 then
-bot.sendMessage(msg.chat_id_, msg.id_, 1, '*Error*\n_Wrong Number ,Range Is [1-999]_', 1,'md')
+bot.sendMessage(msg.chat_id_, msg.id_, 1, '*Error*\n_عدداشتباه ,دامنه روزها[1-999]_', 1,'md')
 else
 		local time = os.time()
 		local buytime = tonumber(os.time())
 		local timeexpire = tonumber(buytime) + (tonumber(chare) * 86400)
     db:set('bot:charge:'..msg.chat_id_,timeexpire)
-bot.sendMessage(msg.chat_id_, msg.id_, 1, '*👉Done✅*\n_⚜️Group Charging_ 》 `'..chare..' Dey`', 1,'md')
+bot.sendMessage(msg.chat_id_, msg.id_, 1, '*👉انجام شد✅*\n_⚜️شارژ گروه 》 `'..chare..' Dey`', 1,'md')
 end 
 end 
 
@@ -1965,7 +1965,7 @@ db:set(SUDO..'pinned'..msg.chat_id_,msg.reply_to_message_id_)
     if text and msg_type == 'text' and not is_muted(msg.chat_id_,msg.sender_user_id_) then
        if text == "من" then
          local msgs = db:get(SUDO..'total:messages:'..msg.chat_id_..':'..msg.sender_user_id_)
-         bot.sendMessage(msg.chat_id_, msg.id_, 1, '➖➖➖➖➖➖➖➖\n<b>⚜️Your UserID</b> 👉 <code>'..msg.sender_user_id_..'</code>\n<b>⚜️Your Msg Send</b> 👉 <code>'..msgs..'</code>\n➖➖➖➖➖➖➖➖\n👉 @BanG_TeaM', 1, 'html')
+         bot.sendMessage(msg.chat_id_, msg.id_, 1, '➖➖➖➖➖➖➖➖\n<b>⚜️شناسه شما</b> 👉 <code>'..msg.sender_user_id_..'</code>\n<b>⚜️تعداد پیامهای شما</b> 👉 <code>'..msgs..'</code>\n➖➖➖➖➖➖➖➖\n👉 @Nice20Team', 1, 'html')
       end
 end
 end
