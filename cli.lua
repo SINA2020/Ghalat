@@ -892,25 +892,25 @@ if text and text:match('^اطلاعات') then
 	
 	
 	if cstm and sex and hiphop and bio then 
-	  local text = '🔅نام : '..name..'\n🔅فامیلی : '..lastname..'\n🔅شناسه شما : '..user..'\n🔅شناسه گروه : '..ch..'\n🔅تعداد پیامها  : '..usermsg..'\n🔅رتبه : '..t..'\n➖➖custom info➖➖\n🔅جنسیت : '..sex..'\n🔅Bio : '..bio..'\n🔅سن : '..hiphop..'\n➖➖تاریخ و زمان➖➖\n⌚️زمان : '..jdat.FAtime..'\n🗓تاریخ : '..jdat.FAdate..''
+	  local text = '🔅نام : '..name..'\n🔅فامیلی : '..lastname..'\n🔅شناسه شما : '..user..'\n🔅شناسه گروه : '..ch..'\n🔅تعداد پیامها  : '..usermsg..'\n🔅رتبه : '..t..'\n➖➖اطلاعات بیشتر➖➖\n🔅جنسیت : '..sex..'\n🔅ماه تولد : '..bio..'\n🔅سن : '..hiphop..'\n➖➖تاریخ و زمان➖➖\n⌚️زمان : '..jdat.FAtime..'\n🗓تاریخ : '..jdat.FAdate..''
  bot.sendMessage(msg.chat_id_, msg.id_, 1, text,0)
 	  elseif cstm and sex and hiphop and not bio then 
-	  	  local text = '🔅نام : '..name..'\n🔅فامیلی : '..lastname..'\n🔅شناسه شما: '..user..'\n🔅شناسه گروه : '..ch..'\n🔅تعداد پیامها : '..usermsg..'\n🔅رتبه : '..t..'\n➖➖custom info➖➖\n🔅جنسیت : '..sex..'\n🔅سن : '..hiphop..'\n➖➖تاریخ و زمان➖➖\n⌚️زمان : '..jdat.FAtime..'\n🗓تاریخ : '..jdat.FAdate..''
+	  	  local text = '🔅نام : '..name..'\n🔅فامیلی : '..lastname..'\n🔅شناسه شما: '..user..'\n🔅شناسه گروه : '..ch..'\n🔅تعداد پیامها : '..usermsg..'\n🔅رتبه : '..t..'\n➖➖اطلاعات بیشتر➖➖\n🔅جنسیت : '..sex..'\n🔅سن : '..hiphop..'\n➖➖تاریخ و زمان➖➖\n⌚️زمان : '..jdat.FAtime..'\n🗓تاریخ : '..jdat.FAdate..''
  bot.sendMessage(msg.chat_id_, msg.id_, 1, text,0)
 	  elseif cstm and hiphop and bio and not sex then 
-	  	  local text = '🔅نام : '..name..'\n🔅فامیلی : '..lastname..'\n🔅شناسه شما : '..user..'\n🔅شناسه گروه : '..ch..'\n🔅تعداد پیامها : '..usermsg..'\n🔅رتبه : '..t..'\n➖➖custom info➖➖\n🔅Bio : '..bio..'\n🔅سن : '..hiphop..'\n➖➖تاریخ و زمان➖➖\n⌚️زمان : '..jdat.FAtime..'\n🗓تاریخ : '..jdat.FAdate..''
+	  	  local text = '🔅نام : '..name..'\n🔅فامیلی : '..lastname..'\n🔅شناسه شما : '..user..'\n🔅شناسه گروه : '..ch..'\n🔅تعداد پیامها : '..usermsg..'\n🔅رتبه : '..t..'\n➖➖ اطلاعات بیشتر➖➖\n🔅ماه تولد : '..bio..'\n🔅سن : '..hiphop..'\n➖➖تاریخ و زمان➖➖\n⌚️زمان : '..jdat.FAtime..'\n🗓تاریخ : '..jdat.FAdate..''
  bot.sendMessage(msg.chat_id_, msg.id_, 1, text,0)
 	  elseif cstm and sex and bio and not hiphop then 
-	  	  local text = '🔅نام : '..name..'\n🔅فامیلی : '..lastname..'\n🔅شناسه شما : '..user..'\n🔅شناسه گروه : '..ch..'\n🔅تعداد پیامها : '..usermsg..'\n🔅رتبه : '..t..'\n➖➖custom info➖➖\n🔅جنسیت : '..sex..'\n🔅Bio : '..bio..'\n➖➖تاریخ و زمان➖➖\n⌚️زمان : '..jdat.FAtime..'\n🗓تاریخ : '..jdat.FAdate..''
+	  	  local text = '🔅نام : '..name..'\n🔅فامیلی : '..lastname..'\n🔅شناسه شما : '..user..'\n🔅شناسه گروه : '..ch..'\n🔅تعداد پیامها : '..usermsg..'\n🔅رتبه : '..t..'\n➖➖ اطلاعات بیشتر ➖➖\n🔅جنسیت : '..sex..'\n🔅ماه تولد : '..bio..'\n➖➖تاریخ و زمان➖➖\n⌚️زمان : '..jdat.FAtime..'\n🗓تاریخ : '..jdat.FAdate..''
  bot.sendMessage(msg.chat_id_, msg.id_, 1, text,0)
 	  elseif cstm and sex and not hiphop and not bio then 
-	  	  local text = '🔅نام : '..name..'\n🔅فامیلی : '..lastname..'\n🔅شناسه شما : '..user..'\n🔅شناسه گروه : '..ch..'\n🔅تعداد پیامها : '..usermsg..'\n🔅رتبه : '..t..'\n➖➖custom info➖➖\n🔅جنسیت : '..sex..'\n➖➖تاریخ و زمان➖➖\n⌚️زمان : '..jdat.FAtime..'\n🗓تاریخ : '..jdat.FAdate..''
+	  	  local text = '🔅نام : '..name..'\n🔅فامیلی : '..lastname..'\n🔅شناسه شما : '..user..'\n🔅شناسه گروه : '..ch..'\n🔅تعداد پیامها : '..usermsg..'\n🔅رتبه : '..t..'\n➖➖اطلاعات بیشتر➖➖\n🔅جنسیت : '..sex..'\n➖➖تاریخ و زمان➖➖\n⌚️زمان : '..jdat.FAtime..'\n🗓تاریخ : '..jdat.FAdate..''
  bot.sendMessage(msg.chat_id_, msg.id_, 1, text,0)
 	  elseif cstm and not sex and hiphop and not bio then
-	      local text = '🔅نام : '..name..'\n🔅فامیلی : '..lastname..'\n🔅شناسه شما : '..user..'\n🔅شناسه گروه : '..ch..'\n🔅تعداد پیامها : '..usermsg..'\n🔅رتبه : '..t..'\n➖➖custom info➖➖\n🔅سن : '..hiphop..'\n➖➖تاریخ و زمان➖➖\n⌚️زمان : '..jdat.FAtime..'\n🗓تاریخ : '..jdat.FAdate..''
+	      local text = '🔅نام : '..name..'\n🔅فامیلی : '..lastname..'\n🔅شناسه شما : '..user..'\n🔅شناسه گروه : '..ch..'\n🔅تعداد پیامها : '..usermsg..'\n🔅رتبه : '..t..'\n➖➖اطلاعات بیشتر➖➖\n🔅سن : '..hiphop..'\n➖➖تاریخ و زمان➖➖\n⌚️زمان : '..jdat.FAtime..'\n🗓تاریخ : '..jdat.FAdate..''
  bot.sendMessage(msg.chat_id_, msg.id_, 1, text,0)
 	  elseif cstm and not sex and not hiphop and bio then
-	      local text = '🔅نام : '..name..'\n🔅فامیلی : '..lastname..'\n🔅شناسه شما : '..user..'\n🔅شناسه گروه : '..ch..'\n🔅تعداد پیامها  : '..usermsg..'\n🔅رتبه : '..t..'\n➖➖custom info➖➖\n🔅Bio : '..bio..'\n➖➖تاریخ و زمان➖➖\n⌚️زمان : '..jdat.FAtime..'\n🗓تاریخ : '..jdat.FAdate..''
+	      local text = '🔅نام : '..name..'\n🔅فامیلی : '..lastname..'\n🔅شناسه شما : '..user..'\n🔅شناسه گروه : '..ch..'\n🔅تعداد پیامها  : '..usermsg..'\n🔅رتبه : '..t..'\n➖➖اطلاعات بیشتر➖➖\n🔅ماه تولد : '..bio..'\n➖➖تاریخ و زمان➖➖\n⌚️زمان : '..jdat.FAtime..'\n🗓تاریخ : '..jdat.FAdate..''
  bot.sendMessage(msg.chat_id_, msg.id_, 1, text,0)
 	 else 
 	 local text = '🔅نام : '..name..'\n🔅فامیلی : '..lastname..'\n🔅شناسه شما : '..user..'\n🔅شناسه گروه : '..ch..'\n🔅تعداد پیامها  : '..usermsg..'\n🔅رتبه : '..t..'\n➖➖تاریخ و زمان➖➖\n⌚️زمان : '..jdat.FAtime..'\n🗓تاریخ : '..jdat.FAdate..''
@@ -1080,7 +1080,7 @@ end
           bot.sendMessage(msg.chat_id_, msg.id_, 1,'<code>>به لیست ادمین های ربات افزوده گردید.</code>', 1, 'html')
         end
       --------------------------master--------------------------
-	   if text == 'masterset' then
+	   if text == 'تنظیم ادمین' then
           function prom_reply(extra, result, success)
         db:sadd(SUDO..'masters:'..result.sender_user_id_)
         local master = result.sender_user_id_
@@ -1091,12 +1091,12 @@ end
            bot.getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),prom_reply)
           end
         end
-        if text and text:match('^masterset (%d+)') then
-          local master = text:match('masterset (%d+)')
+        if text and text:match('^تنظیم ادمین (%d+)') then
+          local master = text:match('تنظیم ادمین (%d+)')
           db:sadd(SUDO..'masters:'..master)
         bot.sendMessage(msg.chat_id_, msg.id_, 1, '<code>>کاربر</code> [<b>'..master..'</b>] <code>به لیست ادمین های ربات افزوده گردید.</code>', 1, 'html')
       end
-        if text == 'masterdem' then
+        if text == 'عزل ادمین' then
         function prom_reply(extra, result, success)
         db:srem(SUDO..'masters:'..result.sender_user_id_)
         bot.sendMessage(msg.chat_id_, msg.id_, 1, '<code>>کاربر</code> [<b>'..result.sender_user_id_..'</b>] <code>از لیست ادمین های ربات حذف گردید.</code>', 1, 'html')
@@ -1105,29 +1105,29 @@ end
         else
            bot.getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),prom_reply)  
           end
-        if text and text:match('^masterdem (%d+)') then
-          local master = text:match('masterdem (%d+)')
+        if text and text:match('^عزل ادمین (%d+)') then
+          local master = text:match('عزل ادمین (%d+)')
          db:srem(SUDO..'masters:'..master)
         bot.sendMessage(msg.chat_id_, msg.id_, 1, '<code>>کاربر</code> [<b>'..master..'</b>] <code>از لیست ادمین های ربات حذف گردید.</code>', 1, 'html')
       end	 
         end
 
 ---------------------reload -------------------------
-	   if text == 'reload' and is_sudo(msg) then
+	   if text == 'بارگذاری' and is_sudo(msg) then
        dofile('./cli.lua') 
- bot.sendMessage(msg.chat_id_, msg.id_, 1,'》 <code>BanG TG Cli</code> <b>Reloaded  ✅</b>', 1, 'html')
+ bot.sendMessage(msg.chat_id_, msg.id_, 1,'》 <code>ربات Cli</code> <bریلود شد  ✅</b>', 1, 'html')
             end
 
-	   if text == 'reload inline' and is_sudo(msg) then
+	   if text == 'بارگذاری اینلاین' and is_sudo(msg) then
        dofile('./api.lua') 
- bot.sendMessage(msg.chat_id_, msg.id_, 1,'》 <code>BanG TG iNLiNE</code> <b>Reloaded  ✅</b>', 1, 'html')
+ bot.sendMessage(msg.chat_id_, msg.id_, 1,'》 <code>اینلاین ربات</code> <b>ریلود شد  ✅</b>', 1, 'html')
             end
-	    if text == 'bang' and is_sudoers(msg) then
+	    if text == 'نایس' and is_sudoers(msg) then
     local gps = db:scard("botgp")
 	local users = db:scard("usersbot")
     local allmgs = db:get("allmsg")
 
-					bot.sendMessage(msg.chat_id_, msg.id_, 1, '➖➖➖➖➖➖➖➖➖➖\n`⚜️BanG TG` *V 2*✅\n\n*🌐Github Link 👇*\n\n`https://github.com/BibakBangTeam/inline.git\n`\n➖➖➖➖➖➖➖➖➖➖\n_📊 BoT Stats 👇_\n\n*🌀 Super Groups 👉* `'..gps..'`\n*👤 Users 👉* `'..users..'`\n*📝 Message Received 👉* `'..allmgs..'`\n➖➖➖➖➖➖➖➖➖➖', 1, 'md')
+					bot.sendMessage(msg.chat_id_, msg.id_, 1, '➖➖➖➖➖➖➖➖➖➖\n`⚜️ نایس ربات` *V 2*✅\n\n*🌐کانال تیم 👇*\n\n`https://telegram.me/Nice20Team\n`\n➖➖➖➖➖➖➖➖➖➖\n_📊 وضعیت ربات 👇_\n\n*🌀 گروهها 👉* `'..gps..'`\n*👤 اعضا 👉* `'..users..'`\n*📝کل پیامها 👉* `'..allmgs..'`\n➖➖➖➖➖➖➖➖➖➖', 1, 'md')
 	end
 	  -----------------owner------------------------
       -- owner
@@ -1232,8 +1232,8 @@ end
           end
         bot.resolve_username(username,demreply)
         end
-        if text and text:match('^modset (%d+)') then
-          local user = text:match('modset (%d+)')
+        if text and text:match('^تنظیم مدیر (%d+)') then
+          local user = text:match('تنظیم مدیر (%d+)')
           db:sadd(SUDO..'mods:'..msg.chat_id_,user)
         bot.sendMessage(msg.chat_id_, msg.id_, 1, '<code>>کاربر</code> [<b>'..user..'</b>] <code>به مقام مدیریت گروه ارتقاء یافت.</code>', 1, 'html')
       end
@@ -1254,7 +1254,7 @@ end
 end
 	local jdat = json:decode(url)
 			 local idgp = 304107094
-			 local text = '🔴*The robot went online*\n➖➖➖➖➖➖➖➖\n🔹*Time:* `'..jdat.ENtime..'`\n➖➖➖➖➖➖➖➖\n🔸*Date:* `'..jdat.FAdate..'`\n➖➖➖➖➖➖➖➖\n'
+			 local text = '🔴*The robot went online*\n➖➖➖➖➖➖➖➖\n🔹*زمان:* `'..jdat.ENtime..'`\n➖➖➖➖➖➖➖➖\n🔸*تاریخ:* `'..jdat.FAdate..'`\n➖➖➖➖➖➖➖➖\n'
 			 bot.sendMessage(idgp, 0, 1,text, 1, 'md')
 			 db:del(SUDO..'bot_on')
 			end
@@ -1351,7 +1351,7 @@ end
         if text == 'لینک' then
           local link = db:get(SUDO..'grouplink'..msg.chat_id_) 
           if link then
-        bot.sendMessage(msg.chat_id_, msg.id_, 1, '➖➖➖➖➖➖➖➖➖\n<b>🌐Group Link👇</b>\n\n👉 '..link..'\n➖➖➖➖➖➖➖➖➖\n⚜️ @BanG_TeaM', 1, 'html')
+        bot.sendMessage(msg.chat_id_, msg.id_, 1, '➖➖➖➖➖➖➖➖➖\n<b>🌐Group Link👇</b>\n\n👉 '..link..'\n➖➖➖➖➖➖➖➖➖\n⚜️ @Nice20Team', 1, 'html')
             else
         bot.sendMessage(msg.chat_id_, msg.id_, 1, '<code>>لینک ورود به گروه تنظیم نشده است.</code>\n<code>ثبت لینک جدید با دستور</code>\n<b>/setlink</b> <i>link</i>\n<code>امکان پذیر است.</code>', 1, 'html')
             end
@@ -1588,7 +1588,7 @@ end
 		
     ----------warn settings --------------
 	
-	if text and text:match('^warnmax (%d+)$') then
+	if text and text:match('^تعداد اخطار (%d+)$') then
 		local ch = msg.chat_id_
         db:hset("warn:settings:"..ch ,"warnmax" ,text:match('warnmax (%d+)'))
         bot.sendMessage(msg.chat_id_, msg.id_, 1,'<code>>حداکثر اخطار به تعداد:</code> [<b>'..text:match('warnmax (.*)')..'</b>] <code>تغییر یافت.</code>', 1, 'html')
@@ -1647,8 +1647,8 @@ end
 	  	  text = "ok"
 	  bot.sendMessage(msg.chat_id_, msg.id_, 1, text, 1, 'html')
 	  -----------set bio ------------- 
-      elseif text and text:match('^setbio (.*)$') then	
-	  local bio = text:match('^setbio (.*)$')
+      elseif text and text:match('^تنظیم ماه تولد (.*)$') then	
+	  local bio = text:match('^تنظیم ماه تولد (.*)$')
 	  db:hset("mehti:info"..user,"bio" ,bio)
 	  	  text = "ok"
 	  bot.sendMessage(msg.chat_id_, msg.id_, 1, text, 1, 'html')
@@ -1674,7 +1674,7 @@ end
 	  	  text = "ok"
 	  bot.sendMessage(msg.chat_id_, msg.id_, 1, text, 1, 'html')
 	  -----------del bio -------------
-	  elseif text and text:match('^del bio$') then
+	  elseif text and text:match('^حذف ماه تولد$') then
 	  db:hdel('mehti:info'..user, 'bio')
 	  	  text = "ok"
 	  bot.sendMessage(msg.chat_id_, msg.id_, 1, text, 1, 'html')
@@ -1684,13 +1684,13 @@ end
 	  	  text = "ok"
 	  bot.sendMessage(msg.chat_id_, msg.id_, 1, text, 1, 'html')
 	  -----------cstm------------
-	  elseif text and text:match('^تنظیم مشتری$') then
+	  elseif text and text:match('^تنظیم اطلاعات بیشتر$') then
 	  text = 12 
 	  db:hset("mehti:info"..user,"cstm" ,text)
 	  	  text = "ok"
 	  bot.sendMessage(msg.chat_id_, msg.id_, 1, text, 1, 'html')
 	  
-	  	  elseif text and text:match('^حذف مشتری$') then
+	  	  elseif text and text:match('^حذف اطلاعات بیشتر$') then
 	  db:hdel("mehti:info"..user,"cstm")
 	  	  text = "ok"
 	  bot.sendMessage(msg.chat_id_, msg.id_, 1, text, 1, 'html')
