@@ -7,8 +7,8 @@ https = require "ssl.https"
 redis = require('redis')
 db = redis.connect('127.0.0.1', 6379)
 BASE = '/home/ta11/inline/'
-SUDO = 261764158 -- sudo id
-sudo_users = {261764158,Userid}
+SUDO = 372530129 -- sudo id
+sudo_users = {372530129,Userid}
 BOTS = 249464384 -- bot id
 bot_id = db:get(SUDO..'bot_id')
 db:set(SUDO..'bot_on',"on")
