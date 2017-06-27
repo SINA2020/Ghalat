@@ -1970,7 +1970,7 @@ db:set(SUDO..'pinned'..msg.chat_id_,msg.reply_to_message_id_)
 end
 end
   -- help 
-  if text and text == 'help' then
+  if text and text == 'ghelp' then
     if is_sudoers(msg) then
 help = [[متن راهنمای مالک ربات ثبت نشده است.]]
 
