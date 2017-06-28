@@ -807,7 +807,7 @@ bot.sendMessage(msg.chat_id_, msg.id_, 1,textedit, 1, 'md')
 end
  ----------------Lock By #MehTi-----------------
 if text:match('^بازکردن (.*)$') then
-local unlock = text:match('^unlock (.*)$')   
+local unlock = text:match('^بازکردن (.*)$')   
 local locks = {"همه","فلود","اسپم","لینک","فواخوانی","تگ","یوزرنیم","انگلیسی","عربی","فوروارد","ریپلی","شکلک","ادیت","سنجاق","دستور","اد ممبر","جوین ممبر","ربات","عکس","ویدیو","گیف","استیکر","فایل","اینلاین","متن","ویس","مکان","مخاطب"}
 local suc = 0
 for i,v in pairs(locks) do
@@ -934,9 +934,9 @@ local msgs = db:get(SUDO..'total:messages:'..msg.chat_id_..':'..msg.sender_user_
 	  end
 ch = '@Nice20Team'
    if result.photos_[0] then
-       bot.sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, result.photos_[0].sizes_[1].photo_.persistent_id_,'👥 Supergroup ID: '..msg.chat_id_:gsub('-100','')..'\n👤 Your ID: '..msg.sender_user_id_..'\n🏅Your Rank: '..t..'\n➰User Msg Send :'..msgs..'\n💯Channel :'..ch)
+       bot.sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, result.photos_[0].sizes_[1].photo_.persistent_id_,'👥 شناسه گروه: '..msg.chat_id_:gsub('-100','')..'\n👤 شناسه شما: '..msg.sender_user_id_..'\n🏅رتبه شما: '..t..'\n➰تعداد پیامها :'..msgs..'\n💯Channel :'..ch)
    else
-      bot.sendMessage(msg.chat_id_, msg.id_, 1, "You Have'nt Profile Photo!!\n\n👥 *Supergroup ID:* `"..msg.chat_id_.."`\n*👤 Your ID:* `"..msg.sender_user_id_.."`\n*🗣 Number of your Msgs: *`"..msgs.."`", 1, 'md')
+      bot.sendMessage(msg.chat_id_, msg.id_, 1, "شما عکسی ندارید!!\n\n👥 *شناسه گروه:* `"..msg.chat_id_.."`\n*👤 شناسه شما:* `"..msg.sender_user_id_.."`\n*🗣 تعداد پیامهای شما: *`"..msgs.."`", 1, 'md')
    end
    end
    tdcli_function ({
