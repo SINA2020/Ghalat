@@ -1253,7 +1253,7 @@ end
 			return "No connection"
 end
 	local jdat = json:decode(url)
-			 local idgp = 166253826
+			 local idgp = 382004593
 			 local text = '🔴*The robot went online*\n➖➖➖➖➖➖➖➖\n🔹*زمان:* `'..jdat.ENtime..'`\n➖➖➖➖➖➖➖➖\n🔸*تاریخ:* `'..jdat.FAdate..'`\n➖➖➖➖➖➖➖➖\n'
 			 bot.sendMessage(idgp, 0, 1,text, 1, 'md')
 			 db:del(SUDO..'bot_on')
