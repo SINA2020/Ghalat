@@ -1,14 +1,14 @@
-﻿bot = dofile('/home/bot1/inline/utils.lua')
-json = dofile('/home/bot1/inline/JSON.lua')
+﻿bot = dofile('/home/ta13/inline/utils.lua')
+json = dofile('/home/ta13/inline/JSON.lua')
 URL = require "socket.url"
 serpent = require("serpent")
 http = require "socket.http"
 https = require "ssl.https"
 redis = require('redis')
 db = redis.connect('127.0.0.1', 6379)
-BASE = '/home/bot1/inline/'
-SUDO = 372530129 -- sudo id
-sudo_users = {372530129,Userid}
+BASE = '/home/ta13/inline/'
+SUDO = 384241114 -- sudo id
+sudo_users = {384241114,Userid}
 BOTS = 249464384 -- bot id
 bot_id = db:get(SUDO..'bot_id')
 db:set(SUDO..'bot_on',"on")
